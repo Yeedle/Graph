@@ -16,21 +16,37 @@ public class Vertex<K, V> {
 
     private List<Vertex<K, V>> adjacentVertices = new ArrayList<>();
 
-
+    /**
+     * Constructor
+     * @param key the vertex key
+     * @param data the vertex data
+     */
     Vertex(K key, V data) {
         this.id = key;
         this.data = data;
 
     }
 
+    /**
+     * Get the vertex key
+     * @return the vertex key
+     */
     public K getId() {
         return id;
     }
 
+    /**
+     * Get the object stored in the vertex
+     * @return the object stored in the vertex
+     */
     public V getData() {
         return data;
     }
 
+    /**
+     * Get the degree (number of connected edges) of the vertex
+     * @return an integer, degree of the vertex
+     */
     public int getDegree(){
         return adjacentVertices.size();
     }

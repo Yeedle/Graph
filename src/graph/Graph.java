@@ -29,6 +29,10 @@ public class Graph<K, V> {
         return new Graph<>();
     }
 
+    /**
+     * returns a list of {@link Vertex} objects
+     * @return Collection\<Vertex\<K, V>>
+     */
     public Collection<Vertex<K, V>> getVertices() {
         return vertices.values();
     }
@@ -230,7 +234,11 @@ public class Graph<K, V> {
     }
 
 
-
+    /**
+     * Add a list of {@link Pair}s as edges to the graph
+     * @param pairs of vertex keys of type K
+     * @return the graph
+     */
     public Graph<K,V> addEdges(List<Pair<K>> pairs) {
         for (Pair<K> pair : pairs) {
             //todo add existence check, throw vertex not in edge exception
@@ -241,6 +249,11 @@ public class Graph<K, V> {
     }
 
 
+    /**
+     * Add a set of {@link Pair}s as edges to the graph
+     * @param pairs of vertex keys of type K
+     * @return the graph
+     */
     public Graph<K,V> addEdges(Set<Pair<K>> pairs) {
         for (Pair<K> pair : pairs) {
             //todo add existence check, throw vertex not in edge exception
@@ -254,11 +267,11 @@ public class Graph<K, V> {
     /**
      * Compares this graph to another graph to check if they're isomorphic. Mapping
      * for the keys in this graph to the keys in the other graph has to be provided.
-     * @param otherGraph
-     * @param map
-     * @param <K2>
-     * @param <V2>
-     * @return
+     * @param otherGraph to compare to
+     * @param map a mapping of keys in this graph to keys in the other graphe
+     * @param <K2> the type of keys for the other graph
+     * @param <V2> the type of values in the other graph
+     * @return true if the graphs are isomorphic, false otherwise
      */
     public <K2, V2> boolean isIsomorphic(Graph<K2, V2> otherGraph, Map<K, K2> map) {
 

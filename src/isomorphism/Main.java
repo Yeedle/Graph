@@ -71,12 +71,12 @@ public class Main {
 
 
         Map<String, Integer> map = new HashMap<>();
-        map.put("abe", 1);
+        map.put("abe", 2);
         map.put("bob", 6);
         map.put("con", 8);
         map.put("dan", 3);
         map.put("gil", 5);
-        map.put("hil", 2);
+        map.put("hil", 1);
         map.put("ida", 4);
         map.put("jon", 7);
 
